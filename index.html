@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tochukwu's Portfolio</title>
+  <style>
+    /* Reset & Base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background-color: #00bcd4;
+      color: white;
+      padding: 1.5em 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2em;
+      margin-bottom: 0.5em;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #004d40;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 2em;
+    }
+
+    .profile-img {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 1em;
+    }
+
+    .role-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: 0.5em;
+      flex-wrap: wrap;
+      margin-bottom: 1em;
+    }
+
+    .role {
+      font-size: 2em;
+      color: #00bcd4;
+      font-weight: bold;
+    }
+
+    .sub-role {
+      font-size: 1.2em;
+      color: #00796b;
+      font-style: italic;
+    }
+
+    .social-links a {
+      font-size: 2em;
+      margin: 0.5em;
+      text-decoration: none;
+    }
+
+    /* Sections */
+    section {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    /* Skills Section - Animated & Colorful */
+    .skills-section {
+      background: linear-gradient(135deg, #00bcd4, #0097a7);
+      color: white;
+      padding: 2em;
+      animation: fadeInSkills 1.5s ease forwards;
+      opacity: 0;
+    }
+
+    .skills-section h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 1em;
+      color: #fff;
+    }
+
+    .skills-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1em;
+      padding: 0;
+    }
+
+    .skills-list li {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 0.8em;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .skills-list li:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInSkills {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Services & Projects */
+    .services-grid, .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2em;
+    }
+
+    .service-card, .project-card {
+      background-color: #fff;
+      padding: 1em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .project-icon {
+      font-size: 2em;
+    }
+
+    /* Contact */
+    .email-button {
+      background-color: #00bcd4;
+      color: white;
+      padding: 0.7em 1.5em;
+      border-radius: 5px;
+      font-size: 1em;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .email-button:hover {
+      background-color: #0097a7;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #222;
+      text-align: center;
+      padding: 1em;
+      margin-top: 3em;
+    }
+
+    .footer-text {
+      color: white;
+      font-size: 1em;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tochukwu Prosper Anyachebelu</h1>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero">
+    <img src="Tochukwu.jpg" alt="Tochukwu's Profile Photo" class="profile-img" />
+    <h2>HI, I'M</h2>
+    <h1>TOCHUKWU PROSPER ANYACHEBELU</h1>
+    <div class="role-wrapper">
+      <h1 class="role">Frontend Developer</h1>
+      <span class="sub-role">Geek</span>
+    </div>
+    <p>
+      I'm a Frontend Developer focused on building responsive, accessible, and user-friendly web interfaces. I specialize in HTML, CSS, and JavaScript, and I love turning clean designs into functional websites.
+    </p>
+    <p>
+      Experienced in creating dashboard layouts, resume sites, and component-based UIs. Passionate about writing maintainable code and collaborating on meaningful projects.
+    </p>
+    <div class="social-links">
+      <a href="mailto:tochukwuanyachebelu@gmail.com" title="Email"><span>📧</span></a>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <h2>About Me</h2>
+    <p>
+      I’m a frontend developer based in Lagos, Nigeria. I started my frontend journey through mentorship and self-study, learning fundamentals of HTML and CSS from scratch, and quickly fell in love with the process of bringing designs to life.
+    </p>
+    <p>
+      Outside of coding, I’m curious about design systems, accessibility, and how technology can empower people. I believe in continuous learning, and I’m always working on side projects to sharpen my skills and explore new ideas.
+    </p>
+  </section>
+
+  <section id="skills" class="skills-section">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>HTML5 & CSS3</li>
+      <li>Responsive Design</li>
+      <li>Flexbox & Grid</li>
+      <li>JavaScript (Basics)</li>
+      <li>Git & GitHub</li>
+      <li>Figma (UI Design)</li>
+    </ul>
+  </section>
+
+  <section id="services" class="services-section">
+    <h2>Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Website Design</h3>
+        <p>Clean, responsive websites built with HTML, CSS, and a touch of JavaScript. Perfect for personal brands.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects-section">
+    <h2>My Projects</h2>
+    <p class="projects-intro">
+      These are real-world projects I’ve built to showcase my frontend development skills and solve practical problems.
+    </p>
+    <div class="projects-grid">
+     
+      <div class="project-card">
+        <div class="project-icon">🎓</div>
+        <h3>MyCampus Portal</h3>
+        <p>
+          A responsive student dashboard interface designed to mimic a real university portal. Built with semantic HTML and styled using Flexbox and CSS Grid.
+        </p>
+        <ul>
+          <li><strong>Tech Stack:</strong> HTML5, CSS3, Flexbox, Grid</li>
+          <li><strong>Features:</strong> Dashboard UI, card components, responsive design</li>
+          <li><strong>Status:</strong> IN PROGRESS 🔜</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">🧾</div>
+        <h3>Tochukwu CV Online</h3>
+        <p>
+          A personal resume website that replaces traditional PDFs. Includes sections for education, experience, skills, and contact info.
+        </p>
+        <ul>
+          <li><strong>Tech Stack:</strong> HTML5, CSS3, Google Fonts</li>
+          <li><strong>Features:</strong> Resume layout, responsive sections, contact link</li>
+          <li><strong>Status:</strong> IN PROGRESS 🔜</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Get in Touch</h2>
+  <p>
+    I’m always excited to connect with fellow developers, potential clients, and anyone passionate about technology. Feel free to reach out.
+  </p>
+  <p>
+  
+ <p>
+  <a href="mailto:tochukwuanyachebelu@gmail.com" class="email-button">📧 Send me an email</a>
+</p>
+ <footer>
+  <p class="footer-text">💻 &copy; 2025 Tochukwu Prosper Anyachebelu. All rights reserved.</p>
+</footer>
